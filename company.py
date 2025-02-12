@@ -25,8 +25,8 @@ class Author:
 
     def __str__(self):
         return f"{self.name} ({self.birth_year}, {self.Age}, {self.contact} ,{self.nationality})"
-
-
+author_details = Author("Chinua Achebe", 1925,"100","achebe101@gmail.com","Naigerian")
+print(author_details)
 class Book:
     def __init__(self, title, publication_year, author, language, edition):
         self.title = title
@@ -34,7 +34,9 @@ class Book:
         self.author = author
         self.language = language
         self.edition = edition
-        author.add_book(self)
+    
 
     def __str__(self):
-        return f"'{self.title}' by {self.author.name} ({self.publication_year} {self.language},{self.edition})"
+        return f"'{self.title}' by {self.author} ({self.publication_year} ,{self.language},{self.edition})"
+book_details= Book("Things fall apart","Chinua Achebe","1990","English","8th edition")
+print(book_details)
